@@ -10653,6 +10653,138 @@
 			)
 		)
 	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "495ea0ed-cbf1-49eb-a88d-bf35d3b625b8")
+		(pts
+			(xy 81.915 74.295) (xy 139.065 74.295)
+		)
+		(height -6.35)
+		(gr_text "2,2500 in"
+			(at 110.49 66.795 0)
+			(layer "Dwgs.User")
+			(uuid "495ea0ed-cbf1-49eb-a88d-bf35d3b625b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.15)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "50a62428-4753-4204-a832-a51e1a94cf73")
+		(pts
+			(xy 81.915 74.295) (xy 81.915 93.345)
+		)
+		(height 4.445)
+		(gr_text "0,7500 in"
+			(at 76.32 83.82 90)
+			(layer "Dwgs.User")
+			(uuid "50a62428-4753-4204-a832-a51e1a94cf73")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.15)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "617c0324-a9f6-43b1-9e4b-5b6197272699")
+		(pts
+			(xy 78.74 74.295) (xy 142.24 74.295)
+		)
+		(height -8.255)
+		(gr_text "2,5000 in"
+			(at 110.49 64.89 0)
+			(layer "Dwgs.User")
+			(uuid "617c0324-a9f6-43b1-9e4b-5b6197272699")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.15)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "761d5af0-d5c2-4642-ab91-7ca8809b8e39")
+		(pts
+			(xy 83.82 71.12) (xy 83.82 96.52)
+		)
+		(height 8.89)
+		(gr_text "1,0000 in"
+			(at 73.78 83.82 90)
+			(layer "Dwgs.User")
+			(uuid "761d5af0-d5c2-4642-ab91-7ca8809b8e39")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 4)
+		)
+		(style
+			(thickness 0.15)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
 	(segment
 		(start 100.65 77.602)
 		(end 100.528 77.724)
