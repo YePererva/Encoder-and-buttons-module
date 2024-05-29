@@ -4,6 +4,10 @@
 	(generator_version "8.0")
 	(uuid "bd410bad-7064-4a0d-9cb7-e928407f3c66")
 	(paper "A4")
+	(title_block
+		(title "Encoder and push-buttons module with hardware debouncing")
+		(comment 1 "Signal diodes are optional  and could be ommited.")
+	)
 	(lib_symbols
 		(symbol "74xx:74HC14"
 			(pin_names
@@ -1159,22 +1163,22 @@
 				)
 			)
 		)
-		(symbol "Device:RotaryEncoder_Switch"
+		(symbol "Device:RotaryEncoder_Switch_MP"
 			(pin_names
 				(offset 0.254) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0 6.604 0)
+				(at 0 8.89 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "RotaryEncoder_Switch"
-				(at 0 -6.604 0)
+			(property "Value" "RotaryEncoder_Switch_MP"
+				(at 0 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1191,7 +1195,7 @@
 				)
 			)
 			(property "Datasheet" "~"
-				(at 0 6.604 0)
+				(at 0 -12.7 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1199,8 +1203,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
-				(at 0 0 0)
+			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch and MP Pin"
+				(at 0 -15.24 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1226,7 +1230,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "RotaryEncoder_Switch_0_1"
+			(symbol "RotaryEncoder_Switch_MP_0_1"
 				(rectangle
 					(start -5.08 5.08)
 					(end 5.08 -5.08)
@@ -1451,7 +1455,7 @@
 					)
 				)
 			)
-			(symbol "RotaryEncoder_Switch_1_1"
+			(symbol "RotaryEncoder_Switch_MP_1_1"
 				(pin passive line
 					(at -7.62 2.54 0)
 					(length 2.54)
@@ -1499,6 +1503,24 @@
 						)
 					)
 					(number "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2214,12 +2236,6 @@
 		(uuid "46bcde31-521b-4c52-ac4b-24277b569a9a")
 	)
 	(junction
-		(at 209.55 25.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "53fb89e3-da9e-45c5-a2c9-26754eb7f95d")
-	)
-	(junction
 		(at 100.33 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2335,16 +2351,6 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 77.47) (xy 247.65 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "03c78f1d-a5d5-4bd4-b138-5d69ce5a57db")
-	)
-	(wire
-		(pts
 			(xy 247.65 41.91) (xy 265.43 41.91)
 		)
 		(stroke
@@ -2362,6 +2368,16 @@
 			(type default)
 		)
 		(uuid "05f17a72-df2e-4cf9-aecd-cb46c91b92db")
+	)
+	(wire
+		(pts
+			(xy 36.83 124.46) (xy 39.37 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06ea7c08-91fe-4ae6-a087-30122217c2b3")
 	)
 	(wire
 		(pts
@@ -2505,16 +2521,6 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 31.75) (xy 229.87 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4178f734-7264-4d70-a639-e6a16042052f")
-	)
-	(wire
-		(pts
 			(xy 43.18 104.14) (xy 43.18 106.68)
 		)
 		(stroke
@@ -2582,26 +2588,6 @@
 			(type default)
 		)
 		(uuid "4e498436-3b6a-423d-a776-662dad28abf4")
-	)
-	(wire
-		(pts
-			(xy 209.55 25.4) (xy 229.87 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ee4cbb8-5ec1-4617-b8a8-a5627de56332")
-	)
-	(wire
-		(pts
-			(xy 265.43 74.93) (xy 257.81 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4fb0dfba-af70-4b8d-bc8d-df37bc2f0943")
 	)
 	(wire
 		(pts
@@ -2695,7 +2681,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 25.4) (xy 209.55 27.94)
+			(xy 209.55 22.86) (xy 209.55 27.94)
 		)
 		(stroke
 			(width 0)
@@ -2732,16 +2718,6 @@
 			(type default)
 		)
 		(uuid "6fec156e-80d5-471b-96d5-5630c83c9032")
-	)
-	(wire
-		(pts
-			(xy 209.55 22.86) (xy 209.55 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "76202261-ad42-4888-9e0d-6be39716d25d")
 	)
 	(wire
 		(pts
@@ -2802,16 +2778,6 @@
 			(type default)
 		)
 		(uuid "7f2e55d4-e46c-4f30-b7f0-49170a32f6ad")
-	)
-	(wire
-		(pts
-			(xy 247.65 77.47) (xy 265.43 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88dddd5d-c630-4025-8294-8467644dacdb")
 	)
 	(wire
 		(pts
@@ -3025,16 +2991,6 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 72.39) (xy 257.81 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb644193-b1a7-4e71-878e-93b9f59d7b17")
-	)
-	(wire
-		(pts
 			(xy 93.98 91.44) (xy 100.33 91.44)
 		)
 		(stroke
@@ -3062,6 +3018,16 @@
 			(type default)
 		)
 		(uuid "c3aed2dd-823c-4bfd-a75e-58e2ca8afb61")
+	)
+	(wire
+		(pts
+			(xy 39.37 124.46) (xy 39.37 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7d16ce8-e5d8-4bd1-8331-1caa5c71be01")
 	)
 	(wire
 		(pts
@@ -3274,7 +3240,7 @@
 		(uuid "f737dba4-a08f-43a3-ab2e-57f7c6ee5725")
 	)
 	(label "BUT_B"
-		(at 194.31 147.32 180)
+		(at 194.31 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3296,7 +3262,7 @@
 		(uuid "2e84ed89-e4cb-4296-9874-22781513507f")
 	)
 	(label "BUT_A"
-		(at 194.31 119.38 180)
+		(at 194.31 128.27 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3307,7 +3273,7 @@
 		(uuid "3919d1c1-352e-45a1-a370-952f85747ca7")
 	)
 	(label "BUT_C"
-		(at 194.31 133.35 180)
+		(at 194.31 158.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3340,7 +3306,7 @@
 		(uuid "777af1bf-4c13-4439-a3b7-627a89c0fc2d")
 	)
 	(label "ENC_A"
-		(at 250.19 119.38 180)
+		(at 229.87 128.27 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3362,7 +3328,7 @@
 		(uuid "b1b49ff6-76be-4d75-a319-fc676dcc9751")
 	)
 	(label "ENC_B"
-		(at 250.19 134.62 180)
+		(at 229.87 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3373,7 +3339,7 @@
 		(uuid "c33a7f59-10da-4d07-bd42-91a86829fb66")
 	)
 	(label "ENC_C"
-		(at 250.19 149.86 180)
+		(at 229.87 158.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3451,7 +3417,7 @@
 	)
 	(global_label "ENCODER_A"
 		(shape output)
-		(at 265.43 119.38 0)
+		(at 245.11 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3461,7 +3427,7 @@
 		)
 		(uuid "0b347b05-c951-434f-ad8f-4839a79301cc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 279.2404 119.38 0)
+			(at 258.9204 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3473,7 +3439,7 @@
 	)
 	(global_label "ENCODER_SW"
 		(shape output)
-		(at 265.43 149.86 0)
+		(at 245.11 158.75 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3483,7 +3449,7 @@
 		)
 		(uuid "249cc5b6-8e0f-47fa-bbc5-8838f094db1f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 280.8127 149.86 0)
+			(at 260.4927 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3515,53 +3481,9 @@
 			)
 		)
 	)
-	(global_label "ENCODER_A"
-		(shape input)
-		(at 265.43 87.63 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2a080f2b-3680-4112-881e-807d04e45631")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.1917 87.5506 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "ENCODER_SW"
-		(shape input)
-		(at 265.43 92.71 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2bc267dc-21c8-4265-bdbf-effe86d0f876")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 250.6193 92.6306 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "BUTTON_A"
 		(shape output)
-		(at 209.55 119.38 0)
+		(at 209.55 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3571,7 +3493,7 @@
 		)
 		(uuid "2bf488b6-2113-4657-8bb1-d6ce60910d87")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.7881 119.38 0)
+			(at 221.7881 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3605,7 +3527,7 @@
 	)
 	(global_label "ENCODER_B"
 		(shape output)
-		(at 265.43 134.62 0)
+		(at 245.11 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3615,7 +3537,7 @@
 		)
 		(uuid "3f294cca-864e-414d-b19c-7eb95a339692")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 279.4218 134.62 0)
+			(at 259.1018 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3638,50 +3560,6 @@
 		(uuid "55970d75-9ebe-4bfc-b280-10c26d0c48cd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 252.0102 54.5306 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BUTTON_B"
-		(shape input)
-		(at 265.43 82.55 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5c33245a-9d6b-4ba6-a3fe-cb0e3a379023")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 253.5826 82.6294 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BUTTON_A"
-		(shape input)
-		(at 265.43 80.01 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6c1edc8c-586d-4b68-b176-4c3331b41077")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 253.764 80.0894 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3715,7 +3593,7 @@
 	)
 	(global_label "BUTTON_B"
 		(shape output)
-		(at 209.55 147.32 0)
+		(at 209.55 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3725,7 +3603,7 @@
 		)
 		(uuid "78bacfd2-f992-4dd0-a984-8d539485e56b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.9695 147.32 0)
+			(at 221.9695 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3780,30 +3658,8 @@
 		)
 	)
 	(global_label "BUTTON_C"
-		(shape input)
-		(at 265.43 85.09 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a6917dab-e06a-438e-aaaf-40c9505b039f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 253.5826 85.1694 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BUTTON_C"
 		(shape output)
-		(at 209.55 133.35 0)
+		(at 209.55 158.75 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3813,7 +3669,7 @@
 		)
 		(uuid "b2c5e6d9-56bb-4149-8ce7-0a99ae052cc5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 221.9695 133.35 0)
+			(at 221.9695 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3911,28 +3767,6 @@
 			)
 		)
 	)
-	(global_label "ENCODER_B"
-		(shape input)
-		(at 265.43 90.17 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f9f291ac-5959-4c96-942b-9364ee316657")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.0102 90.0906 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(symbol
 		(lib_id "power:GND")
 		(at 140.97 55.88 0)
@@ -3994,6 +3828,72 @@
 			(project "encoder_buttons"
 				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 39.37 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "08aa3cc2-3671-4c83-b2c9-b318f862be85")
+		(property "Reference" "#PWR033"
+			(at 39.37 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 39.37 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 39.37 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a6f379f-293c-4e40-a701-37d6117d6594")
+		)
+		(instances
+			(project "encoder_buttons"
+				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -4405,7 +4305,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 110.49 38.1 0)
+		(at 166.37 38.1 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4414,7 +4314,7 @@
 		(fields_autoplaced yes)
 		(uuid "170205cf-f1a6-4346-88fa-232f58439240")
 		(property "Reference" "U1"
-			(at 110.49 29.21 0)
+			(at 166.37 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4422,7 +4322,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 110.49 31.75 0)
+			(at 166.37 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4430,7 +4330,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
-			(at 110.49 38.1 0)
+			(at 166.37 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4439,7 +4339,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 110.49 38.1 0)
+			(at 166.37 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4448,7 +4348,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 110.49 38.1 0)
+			(at 166.37 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4658,7 +4558,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Conn_01x08"
+		(property "Value" "UPPER"
 			(at 273.05 49.5299 0)
 			(effects
 				(font
@@ -4832,71 +4732,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 247.65 80.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1e1705de-0c1c-42bc-b4a4-3da63dd7b939")
-		(property "Reference" "#PWR010"
-			(at 247.65 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 247.65 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 247.65 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 247.65 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 247.65 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dce83517-c8be-44da-9e01-9574e3630e05")
-		)
-		(instances
-			(project "encoder_buttons"
-				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
-					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "74xx:74HC14")
 		(at 166.37 86.36 0)
 		(unit 6)
@@ -5008,10 +4843,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2c60ec33-4480-4eb0-bcfa-fac97b489488")
 		(property "Reference" "D2"
-			(at 34.29 80.01 0)
+			(at 34.29 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5019,7 +4853,7 @@
 			)
 		)
 		(property "Value" "LL4148"
-			(at 34.29 82.55 0)
+			(at 34.29 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5275,7 +5109,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 257.81 119.38 0)
+		(at 237.49 128.27 0)
 		(unit 6)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5284,7 +5118,7 @@
 		(fields_autoplaced yes)
 		(uuid "35b50044-d32c-47ac-b9c8-0ff0d9e2e483")
 		(property "Reference" "U2"
-			(at 257.81 110.49 0)
+			(at 237.49 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5292,7 +5126,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 257.81 113.03 0)
+			(at 237.49 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5300,7 +5134,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
-			(at 257.81 119.38 0)
+			(at 237.49 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5309,7 +5143,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 257.81 119.38 0)
+			(at 237.49 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5318,7 +5152,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 257.81 119.38 0)
+			(at 237.49 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5713,7 +5547,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:RotaryEncoder_Switch")
+		(lib_id "Device:RotaryEncoder_Switch_MP")
 		(at 29.21 124.46 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5721,23 +5555,23 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4778e4f6-8bdd-4ff5-9d9e-3dd0592d1989")
-		(property "Reference" "SW2"
-			(at 35.56 123.1899 90)
+		(uuid "4c9a5a78-604b-4cf7-aa82-1c19e93500d2")
+		(property "Reference" "SW8"
+			(at 22.86 123.1899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "EC11"
-			(at 35.56 125.7299 90)
+			(at 22.86 125.7299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm"
@@ -5750,7 +5584,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 22.606 124.46 0)
+			(at 41.91 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5758,34 +5592,37 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 29.21 124.46 0)
+		(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch and MP Pin"
+			(at 44.45 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "A"
-			(uuid "c0d63e99-fb37-467c-a410-329854b2ba39")
 		)
 		(pin "B"
-			(uuid "87f6fca5-f25c-4b7d-a575-e9f066e5184d")
+			(uuid "4144bcc9-2f30-4b3a-aca1-2766f933cdbb")
+		)
+		(pin "A"
+			(uuid "7862001d-dc03-4503-b0c9-02b1c49aedb9")
 		)
 		(pin "C"
-			(uuid "737d8ddf-b52e-4ae9-84b2-ae77e23bf20e")
+			(uuid "c7c2d63f-6336-4ff8-b341-623b0cf2e257")
+		)
+		(pin "MP"
+			(uuid "c383ac93-cae4-424e-9b92-47d5035ec018")
 		)
 		(pin "S1"
-			(uuid "b71ff8d7-9a1c-4b67-815e-15c5d1453515")
+			(uuid "434ddd2a-bc17-4667-bfdb-d1e08c167351")
 		)
 		(pin "S2"
-			(uuid "1186823b-a62a-436f-b6c1-67fd91f368e9")
+			(uuid "ffe95952-870e-46a8-8015-d67315d0afa9")
 		)
 		(instances
 			(project "encoder_buttons"
 				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
-					(reference "SW2")
+					(reference "SW8")
 					(unit 1)
 				)
 			)
@@ -5863,7 +5700,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 201.93 133.35 0)
+		(at 237.49 143.51 0)
 		(unit 5)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5872,7 +5709,7 @@
 		(fields_autoplaced yes)
 		(uuid "53d7f903-cfb2-40ee-9114-a3a164db077b")
 		(property "Reference" "U2"
-			(at 201.93 124.46 0)
+			(at 237.49 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5880,7 +5717,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 201.93 127 0)
+			(at 237.49 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5888,7 +5725,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
-			(at 201.93 133.35 0)
+			(at 237.49 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5897,7 +5734,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 201.93 133.35 0)
+			(at 237.49 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5906,7 +5743,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 201.93 133.35 0)
+			(at 237.49 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5915,46 +5752,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7700")
+			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7701")
 		)
 		(pin "1"
-			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba3d")
+			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba3e")
 		)
 		(pin "5"
-			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d11")
+			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d12")
 		)
 		(pin "12"
-			(uuid "94fc14b0-494a-4950-b95a-a59f4595850c")
+			(uuid "94fc14b0-494a-4950-b95a-a59f4595850d")
 		)
 		(pin "14"
-			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a1")
+			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a2")
 		)
 		(pin "13"
-			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a49")
+			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a4a")
 		)
 		(pin "4"
-			(uuid "87dc002a-7318-44c8-8578-2094afe79519")
+			(uuid "87dc002a-7318-44c8-8578-2094afe7951a")
 		)
 		(pin "6"
-			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be5f")
+			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be60")
 		)
 		(pin "7"
-			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7b")
+			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7c")
 		)
 		(pin "11"
-			(uuid "c4006a90-565e-4332-9ef6-fe72564918c0")
+			(uuid "c4006a90-565e-4332-9ef6-fe72564918c1")
 		)
 		(pin "10"
-			(uuid "15900007-605b-4963-8817-33a1092a1329")
+			(uuid "15900007-605b-4963-8817-33a1092a132a")
 		)
 		(pin "9"
-			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c80")
+			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c81")
 		)
 		(pin "2"
-			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b0")
+			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b1")
 		)
 		(pin "3"
-			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f36")
+			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f37")
 		)
 		(instances
 			(project "encoder_buttons"
@@ -6033,7 +5870,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 53.34 86.36 0)
+		(at 110.49 38.1 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6042,7 +5879,7 @@
 		(fields_autoplaced yes)
 		(uuid "662e0a2f-eac6-4590-8be6-7eb38ff30282")
 		(property "Reference" "U1"
-			(at 53.34 77.47 0)
+			(at 110.49 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6050,7 +5887,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 53.34 80.01 0)
+			(at 110.49 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6058,7 +5895,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
-			(at 53.34 86.36 0)
+			(at 110.49 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6067,7 +5904,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 53.34 86.36 0)
+			(at 110.49 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6076,7 +5913,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 53.34 86.36 0)
+			(at 110.49 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6266,6 +6103,72 @@
 			(project "encoder_buttons"
 				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 269.24 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7411f3f2-8ef6-49e5-adf9-3b145429046b")
+		(property "Reference" "#PWR032"
+			(at 269.24 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 269.24 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 269.24 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "04627d16-e290-4417-956a-da3a0972199e")
+		)
+		(instances
+			(project "encoder_buttons"
+				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -6476,7 +6379,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 229.87 57.15 0)
+		(at 269.24 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6484,7 +6387,7 @@
 		(dnp no)
 		(uuid "827d1e77-9a09-4594-b20e-e135740acc59")
 		(property "Reference" "#PWR031"
-			(at 229.87 63.5 0)
+			(at 269.24 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6493,7 +6396,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 229.87 62.23 0)
+			(at 269.24 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6501,7 +6404,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 57.15 0)
+			(at 269.24 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6510,7 +6413,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 57.15 0)
+			(at 269.24 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6519,7 +6422,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 229.87 57.15 0)
+			(at 269.24 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6779,7 +6682,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 229.87 44.45 0)
+		(at 269.24 143.51 0)
 		(unit 7)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6788,7 +6691,7 @@
 		(fields_autoplaced yes)
 		(uuid "8962262f-97e7-42d1-839a-4a0b66a820c2")
 		(property "Reference" "U2"
-			(at 236.22 43.1799 0)
+			(at 275.59 142.2399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6797,7 +6700,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 236.22 45.7199 0)
+			(at 275.59 144.7799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6806,7 +6709,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
-			(at 229.87 44.45 0)
+			(at 269.24 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6815,7 +6718,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 229.87 44.45 0)
+			(at 269.24 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6824,7 +6727,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 229.87 44.45 0)
+			(at 269.24 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6833,46 +6736,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7700")
+			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7702")
 		)
 		(pin "1"
-			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba3d")
+			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba3f")
 		)
 		(pin "5"
-			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d11")
+			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d13")
 		)
 		(pin "12"
-			(uuid "94fc14b0-494a-4950-b95a-a59f4595850c")
+			(uuid "94fc14b0-494a-4950-b95a-a59f4595850e")
 		)
 		(pin "14"
-			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a1")
+			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a3")
 		)
 		(pin "13"
-			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a49")
+			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a4b")
 		)
 		(pin "4"
-			(uuid "87dc002a-7318-44c8-8578-2094afe79519")
+			(uuid "87dc002a-7318-44c8-8578-2094afe7951b")
 		)
 		(pin "6"
-			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be5f")
+			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be61")
 		)
 		(pin "7"
-			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7b")
+			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7d")
 		)
 		(pin "11"
-			(uuid "c4006a90-565e-4332-9ef6-fe72564918c0")
+			(uuid "c4006a90-565e-4332-9ef6-fe72564918c2")
 		)
 		(pin "10"
-			(uuid "15900007-605b-4963-8817-33a1092a1329")
+			(uuid "15900007-605b-4963-8817-33a1092a132b")
 		)
 		(pin "9"
-			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c80")
+			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c82")
 		)
 		(pin "2"
-			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b0")
+			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b2")
 		)
 		(pin "3"
-			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f36")
+			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f38")
 		)
 		(instances
 			(project "encoder_buttons"
@@ -6891,6 +6794,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "89e6e6cf-63b3-439d-a1e3-f1d702dfc4bb")
 		(property "Reference" "R12"
 			(at 147.32 93.98 90)
@@ -7026,10 +6930,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8efc0995-bf27-4c94-b43c-12f041da4b36")
 		(property "Reference" "D6"
-			(at 147.32 80.01 0)
+			(at 147.32 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7037,7 +6940,7 @@
 			)
 		)
 		(property "Value" "LL4148"
-			(at 147.32 82.55 0)
+			(at 147.32 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7293,7 +7196,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 166.37 38.1 0)
+		(at 110.49 86.36 0)
 		(unit 5)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7302,7 +7205,7 @@
 		(fields_autoplaced yes)
 		(uuid "9ca2258c-67d3-4892-bd71-aa07c0bf4194")
 		(property "Reference" "U1"
-			(at 166.37 29.21 0)
+			(at 110.49 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7310,7 +7213,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 166.37 31.75 0)
+			(at 110.49 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7318,7 +7221,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
-			(at 166.37 38.1 0)
+			(at 110.49 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7327,7 +7230,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 166.37 38.1 0)
+			(at 110.49 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7336,7 +7239,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 166.37 38.1 0)
+			(at 110.49 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7397,7 +7300,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 257.81 149.86 0)
+		(at 201.93 143.51 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7406,7 +7309,7 @@
 		(fields_autoplaced yes)
 		(uuid "9dcd4c82-9321-42bc-a293-780b91414695")
 		(property "Reference" "U2"
-			(at 257.81 140.97 0)
+			(at 201.93 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7414,7 +7317,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 257.81 143.51 0)
+			(at 201.93 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7422,7 +7325,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
-			(at 257.81 149.86 0)
+			(at 201.93 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7431,7 +7334,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 257.81 149.86 0)
+			(at 201.93 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7440,7 +7343,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 257.81 149.86 0)
+			(at 201.93 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7449,46 +7352,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7700")
+			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7703")
 		)
 		(pin "1"
-			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba3d")
+			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba40")
 		)
 		(pin "5"
-			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d11")
+			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d14")
 		)
 		(pin "12"
-			(uuid "94fc14b0-494a-4950-b95a-a59f4595850c")
+			(uuid "94fc14b0-494a-4950-b95a-a59f4595850f")
 		)
 		(pin "14"
-			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a1")
+			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a4")
 		)
 		(pin "13"
-			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a49")
+			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a4c")
 		)
 		(pin "4"
-			(uuid "87dc002a-7318-44c8-8578-2094afe79519")
+			(uuid "87dc002a-7318-44c8-8578-2094afe7951c")
 		)
 		(pin "6"
-			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be5f")
+			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be62")
 		)
 		(pin "7"
-			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7b")
+			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7e")
 		)
 		(pin "11"
-			(uuid "c4006a90-565e-4332-9ef6-fe72564918c0")
+			(uuid "c4006a90-565e-4332-9ef6-fe72564918c3")
 		)
 		(pin "10"
-			(uuid "15900007-605b-4963-8817-33a1092a1329")
+			(uuid "15900007-605b-4963-8817-33a1092a132c")
 		)
 		(pin "9"
-			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c80")
+			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c83")
 		)
 		(pin "2"
-			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b0")
+			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b3")
 		)
 		(pin "3"
-			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f36")
+			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f39")
 		)
 		(instances
 			(project "encoder_buttons"
@@ -7572,10 +7475,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a240ee66-8aab-4d1b-9793-9ee3e80b33dc")
 		(property "Reference" "D4"
-			(at 90.17 80.01 0)
+			(at 90.17 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7583,7 +7485,7 @@
 			)
 		)
 		(property "Value" "LL4148"
-			(at 90.17 82.55 0)
+			(at 90.17 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7764,7 +7666,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 257.81 134.62 0)
+		(at 237.49 158.75 0)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7773,7 +7675,7 @@
 		(fields_autoplaced yes)
 		(uuid "b494e3d8-e392-46fe-9fb8-b3e854bcf5e0")
 		(property "Reference" "U2"
-			(at 257.81 125.73 0)
+			(at 237.49 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7781,7 +7683,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 257.81 128.27 0)
+			(at 237.49 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7789,7 +7691,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
-			(at 257.81 134.62 0)
+			(at 237.49 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7798,7 +7700,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 257.81 134.62 0)
+			(at 237.49 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7807,7 +7709,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 257.81 134.62 0)
+			(at 237.49 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7816,46 +7718,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7700")
+			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7704")
 		)
 		(pin "1"
-			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba3d")
+			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba41")
 		)
 		(pin "5"
-			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d11")
+			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d15")
 		)
 		(pin "12"
-			(uuid "94fc14b0-494a-4950-b95a-a59f4595850c")
+			(uuid "94fc14b0-494a-4950-b95a-a59f45958510")
 		)
 		(pin "14"
-			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a1")
+			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a5")
 		)
 		(pin "13"
-			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a49")
+			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a4d")
 		)
 		(pin "4"
-			(uuid "87dc002a-7318-44c8-8578-2094afe79519")
+			(uuid "87dc002a-7318-44c8-8578-2094afe7951d")
 		)
 		(pin "6"
-			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be5f")
+			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be63")
 		)
 		(pin "7"
-			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7b")
+			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7f")
 		)
 		(pin "11"
-			(uuid "c4006a90-565e-4332-9ef6-fe72564918c0")
+			(uuid "c4006a90-565e-4332-9ef6-fe72564918c4")
 		)
 		(pin "10"
-			(uuid "15900007-605b-4963-8817-33a1092a1329")
+			(uuid "15900007-605b-4963-8817-33a1092a132d")
 		)
 		(pin "9"
-			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c80")
+			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c84")
 		)
 		(pin "2"
-			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b0")
+			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b4")
 		)
 		(pin "3"
-			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f36")
+			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f3a")
 		)
 		(instances
 			(project "encoder_buttons"
@@ -7868,7 +7770,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 201.93 147.32 0)
+		(at 201.93 158.75 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7876,7 +7778,7 @@
 		(dnp yes)
 		(uuid "b56f938c-1440-43c2-88f9-869ca08843c6")
 		(property "Reference" "U2"
-			(at 201.93 138.43 0)
+			(at 201.93 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7884,7 +7786,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 201.93 140.97 0)
+			(at 201.93 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7892,7 +7794,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
-			(at 201.93 147.32 0)
+			(at 201.93 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7901,7 +7803,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 201.93 147.32 0)
+			(at 201.93 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7910,7 +7812,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 201.93 147.32 0)
+			(at 201.93 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7919,46 +7821,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7700")
+			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7705")
 		)
 		(pin "1"
-			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba3d")
+			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba42")
 		)
 		(pin "5"
-			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d11")
+			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d16")
 		)
 		(pin "12"
-			(uuid "94fc14b0-494a-4950-b95a-a59f4595850c")
+			(uuid "94fc14b0-494a-4950-b95a-a59f45958511")
 		)
 		(pin "14"
-			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a1")
+			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a6")
 		)
 		(pin "13"
-			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a49")
+			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a4e")
 		)
 		(pin "4"
-			(uuid "87dc002a-7318-44c8-8578-2094afe79519")
+			(uuid "87dc002a-7318-44c8-8578-2094afe7951e")
 		)
 		(pin "6"
-			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be5f")
+			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be64")
 		)
 		(pin "7"
-			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7b")
+			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d80")
 		)
 		(pin "11"
-			(uuid "c4006a90-565e-4332-9ef6-fe72564918c0")
+			(uuid "c4006a90-565e-4332-9ef6-fe72564918c5")
 		)
 		(pin "10"
-			(uuid "15900007-605b-4963-8817-33a1092a1329")
+			(uuid "15900007-605b-4963-8817-33a1092a132e")
 		)
 		(pin "9"
-			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c80")
+			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c85")
 		)
 		(pin "2"
-			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b0")
+			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b5")
 		)
 		(pin "3"
-			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f36")
+			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f3b")
 		)
 		(instances
 			(project "encoder_buttons"
@@ -8101,7 +8003,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 201.93 119.38 0)
+		(at 201.93 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8110,7 +8012,7 @@
 		(fields_autoplaced yes)
 		(uuid "ba0510cd-c2dd-4a4f-aa86-85374d785015")
 		(property "Reference" "U2"
-			(at 201.93 110.49 0)
+			(at 201.93 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8118,7 +8020,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 201.93 113.03 0)
+			(at 201.93 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8126,7 +8028,7 @@
 			)
 		)
 		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
-			(at 201.93 119.38 0)
+			(at 201.93 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8135,7 +8037,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 201.93 119.38 0)
+			(at 201.93 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8144,7 +8046,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 201.93 119.38 0)
+			(at 201.93 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8153,46 +8055,46 @@
 			)
 		)
 		(pin "8"
-			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7700")
+			(uuid "fa1fab2d-89fb-42c8-ad25-9c9fd44c7706")
 		)
 		(pin "1"
-			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba3d")
+			(uuid "9bda0823-d766-4d4d-a7e6-200ca3a7ba43")
 		)
 		(pin "5"
-			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d11")
+			(uuid "2136e75c-4113-445d-b7da-e74cdb3a0d17")
 		)
 		(pin "12"
-			(uuid "94fc14b0-494a-4950-b95a-a59f4595850c")
+			(uuid "94fc14b0-494a-4950-b95a-a59f45958512")
 		)
 		(pin "14"
-			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a1")
+			(uuid "5facedff-28c8-497e-ad8e-478dc22d46a7")
 		)
 		(pin "13"
-			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a49")
+			(uuid "ef590d80-7de2-4e41-a12a-1d1e70c39a4f")
 		)
 		(pin "4"
-			(uuid "87dc002a-7318-44c8-8578-2094afe79519")
+			(uuid "87dc002a-7318-44c8-8578-2094afe7951f")
 		)
 		(pin "6"
-			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be5f")
+			(uuid "7bcee0e1-42d4-460d-b2cc-d790b389be65")
 		)
 		(pin "7"
-			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d7b")
+			(uuid "985cf275-d1b1-408c-9811-ba07a0ee3d81")
 		)
 		(pin "11"
-			(uuid "c4006a90-565e-4332-9ef6-fe72564918c0")
+			(uuid "c4006a90-565e-4332-9ef6-fe72564918c6")
 		)
 		(pin "10"
-			(uuid "15900007-605b-4963-8817-33a1092a1329")
+			(uuid "15900007-605b-4963-8817-33a1092a132f")
 		)
 		(pin "9"
-			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c80")
+			(uuid "1cfc487b-03b5-4468-9753-79fb49e36c86")
 		)
 		(pin "2"
-			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b0")
+			(uuid "b83e5081-c69d-4e2d-a579-0dd17300b2b6")
 		)
 		(pin "3"
-			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f36")
+			(uuid "a458f39f-731b-40a3-9f4b-86af4c743f3c")
 		)
 		(instances
 			(project "encoder_buttons"
@@ -8478,7 +8380,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 110.49 86.36 0)
+		(at 53.34 86.36 0)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8487,7 +8389,7 @@
 		(fields_autoplaced yes)
 		(uuid "c9e68732-1ffb-4cf7-b02d-6be9eb6386d5")
 		(property "Reference" "U1"
-			(at 110.49 77.47 0)
+			(at 53.34 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8495,7 +8397,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 110.49 80.01 0)
+			(at 53.34 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8503,7 +8405,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SO-14_3.9x8.65mm_P1.27mm"
-			(at 110.49 86.36 0)
+			(at 53.34 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8512,7 +8414,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 110.49 86.36 0)
+			(at 53.34 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8521,7 +8423,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 110.49 86.36 0)
+			(at 53.34 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9520,94 +9422,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x08")
-		(at 270.51 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ee307e4f-77df-403a-8f3a-2f325d55b6b0")
-		(property "Reference" "J2"
-			(at 273.05 82.5499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x08"
-			(at 273.05 85.0899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
-			(at 270.51 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 270.51 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 270.51 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b7900af1-8440-41c1-aaca-7870bb578c2c")
-		)
-		(pin "2"
-			(uuid "da27f9cd-be36-4d23-a516-1beae1288110")
-		)
-		(pin "3"
-			(uuid "0c0dd93d-089a-4e31-8bee-dd814bda09fc")
-		)
-		(pin "4"
-			(uuid "b7c1ddb7-febd-4988-8df5-5a137e257d86")
-		)
-		(pin "5"
-			(uuid "a2f6e419-2a6a-4594-9ca6-205a064227f9")
-		)
-		(pin "6"
-			(uuid "d966b43b-0f04-4e31-be94-dbae9f265c6a")
-		)
-		(pin "7"
-			(uuid "458ed255-c155-4e44-ab81-065f9086f286")
-		)
-		(pin "8"
-			(uuid "14c724b8-1614-481c-b907-5f0f352aaac9")
-		)
-		(instances
-			(project "encoder_buttons"
-				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 76.2 55.88 0)
 		(unit 1)
@@ -9945,72 +9759,6 @@
 			(project "encoder_buttons"
 				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
 					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 257.81 72.39 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fca31ff8-7276-4d73-9d16-689924a0f5cc")
-		(property "Reference" "#PWR017"
-			(at 257.81 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 257.81 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 257.81 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 257.81 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 257.81 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "39e782ec-298b-4f44-aa09-87b2bb128223")
-		)
-		(instances
-			(project "encoder_buttons"
-				(path "/bd410bad-7064-4a0d-9cb7-e928407f3c66"
-					(reference "#PWR017")
 					(unit 1)
 				)
 			)
