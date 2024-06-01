@@ -12,9 +12,9 @@ Module provides rotary encoder and 3 push-buttons with debouncing circuitry, bas
 	- Capacitors : 0805
 	- Diodes : MiniMELF
 
-| Layout and dimensions | Top View | Bottom View |
-| ------ | ------ | ------|
-| ![](images/dimensions.png) | ![](images/top.png) | ![](images/bottom.png) |
+| Top View | Bottom View |
+| ------ | ------|
+| ![](images/top.png) | ![](images/bottom.png) |
 
 ## Schematics origin
 
